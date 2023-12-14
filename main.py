@@ -1,11 +1,17 @@
-from PIL import Image 
+from PIL import Image
 
-# creating image object 
-img = Image.open(r"plains.jpg") 
+# завантаження зображення
+img = Image.open(r"plains.jpg")
+img.mode
+'RGB'
 
-# using convert method for img1 
-img1 = img.convert("L") 
-img1.show() 
-# using convert method for img2
-img2 = img.convert("1") 
-img2.show()
+# зміна формату зображення
+img1 = img.convert("RGBA")
+img1.mode
+'RGBA'
+
+# виведення зображення
+img1.show()
+
+# збереження зображення
+img1.save(r"plains_1.jpg")
